@@ -1,0 +1,132 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+   <meta charset="utf-8">
+   <title>Taiwan's aging population</title>
+   <meta name="title" content="Taiwan's aging population" />
+   <meta name="keywords" content="Taiwan, aging society, population, data, data visualization, 台灣" />
+   <link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">   <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;700&display=swap');
+
+      body {
+         background-color: #354A68;
+         font-family: 'Source Sans 3', sans-serif;
+         -webkit-font-smoothing: antialiased;
+         margin: 0;
+         padding: 0;
+      }
+
+      svg text {
+         font-family: 'Source Sans 3', sans-serif;
+      }
+
+      .tick text {
+         font-size: 14px;
+      }
+
+      .tick line {
+         display: none;
+      }
+
+      .x-axis path,
+      .y-axis path,
+      .x-axisR path,
+      .y-axisR path,
+      .x-axis-M path,
+      .x-axis-F path {
+         display: none;
+      }
+
+      .show {
+         display: inline-block;
+      }
+
+      .hide {
+         display: none;
+      }
+
+      #svgWrapper {
+         max-width: 1200px;
+         height: 80vh;
+         margin: 50px auto;
+      }
+
+      .wrapper {
+         padding-top: 30px;
+         max-width: 80%;
+         margin-left: auto;
+         margin-right: auto;
+      }
+
+      .chart-wrapper {
+         max-width: 920px;
+         margin: 50px auto;
+      }
+
+      .sequneceButtons {
+         position: fixed;
+         top: 50px;
+         right: 120px;
+         color: white;
+      }
+
+      .sequneceButtons:hover{
+         cursor: pointer;
+      }
+
+      #counterText {
+         position: fixed;
+         top: 50px;
+         left: 20px;
+         color: white;
+      }
+
+      .marker {
+         background-color: #F4C44D;
+         border-radius: 8px;
+         padding: 1px 5px;
+         color: #354A68;
+         font-weight: 700;
+      }
+
+      .x-axis-M,
+      .x-axis-F {
+         color: #fff;
+      }
+
+      
+   </style>
+</head>
+
+<body>
+
+      <div class="wrapper">
+         <div id="counterText">
+            <span id="marker" class="marker"><b>1/4</b></span><br>
+            <p><b>Year</b> <span id="year">1950</span></p>
+            </p><b>Population </b><span id="population">7623000</span></p>
+         </div>
+         <p class="sequneceButtons" id="next">Next</p>
+         <div id="svgWrapper">
+            <svg id="svg"></svg>
+         </div>
+      </div>
+
+
+
+      <script src="https://unpkg.com/intersection-observer"></script>
+      <script src="https://unpkg.com/scrollama"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="./data/data.js"></script>
+      <script src="./data/age.js"></script>
+      <script src="./main.js"></script>
+
+</body>
+
+</html>
