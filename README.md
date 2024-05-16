@@ -10,8 +10,8 @@ UN World Population Prospects 2022, Taiwan data
 ## Tutorial
 
 ### Data
-data.js: Main data, includes year from 1950-2100, age from 0-100, sex FM and M
-age.js: Secondary data, not as important but to keep track of total population by year
+- data.js: Main data, includes year from 1950-2100, age from 0-100, sex FM and M
+- age.js: Secondary data, not as important but to keep track of total population by year
 
 ### SVG setup
 ```
