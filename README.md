@@ -14,7 +14,7 @@ data.js: Main data, includes year from 1950-2100, age from 0-100, sex FM and M
 age.js: Secondary data, not as important but to keep track of total population by year
 
 ### SVG setup
-
+```
 const chartPyramid = d3.select("#chartPyramid");
 
 let widthPyramid = chartPyramid.node().getBoundingClientRect().width;
@@ -33,15 +33,15 @@ const svgPyramid = d3
   .select("#svgPyramid")
   .attr("width", widthPyramid)
   .attr("height", heightPyramid);
-
+```
 ### Only need data for one year 
-
+```
 let age1950 = age.filter(d => d.year === 1950)
-
+```
 ### Create a pyramid that splits into three
 
 Create a group for each of the three pyramids
-
+```
 let g1950 = gPyramid.append("g").attr("class", "g1950");
 let g1993 = gPyramid
   .append("g")
@@ -51,4 +51,4 @@ let g2100 = gPyramid
   .append("g")
   .attr("class", "g2100")
   .attr("transform", `translate(${widthDivided * 2},0)`);
-
+```
