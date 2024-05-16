@@ -52,3 +52,5 @@ let g2100 = gPyramid
   .attr("class", "g2100")
   .attr("transform", `translate(${widthDivided * 2},0)`);
 ```
+
+### Add all the axes / legend / annotations at the end
